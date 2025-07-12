@@ -1,95 +1,9 @@
+// main.cpp
 #include <iostream>
 #include <vector>
+#include "student.h"
+
 using namespace std;
-
-class Student {
-private:
-    int student_id;
-    std::string student_name;
-    std::vector<double> scores;
-public:
-    Student(int, std::string, std::vector<double>);
-    void AddScore(double newScore);
-    void updateName(const std::string& newName);
-    double getAverage() const;
-    void DisplayInfo() const;
-    std::string GetStudentName() const;
-    void UpdateID(int);
-    int GetID() const;
-    char GradeWithLetter() const;
-};
-
-Student::Student(int student_id, std::string student_name, std::vector<double> scores) {
-    this->student_id = student_id;
-    this->student_name = student_name;
-    this->scores = scores;
-}
-
-void Student::AddScore(double newScore) {
-    this->scores.push_back(newScore);
-    cout << "➕ Score added successfully.\n";
-}
-
-void Student::updateName(const std::string& newName) {
-    this->student_name = newName;
-    cout << "✏️  Name updated.\n";
-}
-
-double Student::getAverage() const {
-    if (scores.empty()) return 0.0;
-    double sumOfGrades = 0;
-    for (double s : scores) sumOfGrades += s;
-    return sumOfGrades / scores.size();
-}
-
-std::string Student::GetStudentName() const {
-    return this->student_name;
-}
-
-char Student::GradeWithLetter() const {
-    if (scores.empty()) {
-        cout << "There is no score yet. Enter your scores first!" << endl;
-        return '-';
-    }
-    double avg = getAverage();
-    if (avg >= 18) return 'A';
-    else if (avg >= 15) return 'B';
-    else if (avg >= 12) return 'C';
-    else if (avg >= 10) return 'D';
-    else return 'F';
-}
-
-void Student::DisplayInfo() const {
-    std::cout << "\n-----------------------------\n";
-    std::cout << "Student ID: " << this->student_id << endl;
-    std::cout << "Student Name: " << this->student_name << endl;
-    std::cout << "Student Grades: ";
-    for (double score : scores) cout << score << " ";
-    cout << endl;
-    cout << "Average Score: " << getAverage() << endl;
-    cout << "Grade Level: " << GradeWithLetter() << endl;
-    std::cout << "-----------------------------\n";
-}
-
-void Student::UpdateID(int newId) {
-    this->student_id = newId;
-    cout << "🆔 ID updated.\n";
-}
-
-int Student::GetID() const {
-    return this->student_id;
-}
-
-Student FindStudentWithID(vector<Student> sList, int ID) {
-    for (Student& s : sList) {
-        if (s.GetID() == ID) {
-            cout << "🔍 Student with ID " << ID << " found.\n";
-            return s;
-        }
-    }
-    cout << "❌ No student found with ID: " << ID << endl;
-    return sList.front(); 
-}
 
 int main() {
     std::vector<Student> StudentList;

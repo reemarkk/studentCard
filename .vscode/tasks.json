@@ -10,6 +10,7 @@
 		  "-g",
 		  "-arch", "x86_64",
 		  "main.cpp",
+		  "operations.cpp",
 		  "-o",
 		  "StudentReportCard_x64"
 		],
