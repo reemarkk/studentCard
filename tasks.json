@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Build x64 StudentReportCard",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-std=c++17",
+          "-g",
+          "-arch", "x86_64",         // Force x64 build
+          "main.cpp",
+          "-o",
+          "StudentReportCard_x64"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Build for x86_64 architecture"
+      }
+    ]
+  }
+  

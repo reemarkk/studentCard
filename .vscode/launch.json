@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug x64",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/StudentReportCard_x64",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "lldb",
+        "preLaunchTask": "Build x64"
+      }
+    ]
+  }
+  

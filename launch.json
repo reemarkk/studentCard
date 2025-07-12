@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug StudentReportCard",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/StudentReportCard",
+        "args": [],                       // You can add command-line arguments here
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": true,          // Set true to see input/output in terminal window, not Debug Console
+        "MIMode": "lldb",                 // macOS default debugger
+        "preLaunchTask": "Build StudentReportCard"
+      }
+    ]
+  }
+  

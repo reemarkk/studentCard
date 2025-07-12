@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "operations.h": "c",
+        "iostream": "cpp",
+        "vector": "cpp"
+    }
+}
