@@ -1,8 +1,8 @@
-### Student Record System
+## Student Record System
 
 A simple C++ console application to manage student records, including IDs, names, grades, and grade calculations.
 
-## Features
+### Features
 
 - Add new students with ID, name, and scores
 - Add scores to existing students
